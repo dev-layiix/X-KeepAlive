@@ -1,0 +1,350 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="notification_channel">Supervisión de X-KeepAlive</string>
+    <string name="notification_channel_description">Estado del juego seleccionado. No cubre el juego.</string>
+    <string name="notification_stop">Detener</string>
+    <string name="notif_starting">Iniciando supervisión</string>
+    <string name="notif_no_game">Sin juego</string>
+
+    <string name="nav_home">Inicio</string>
+    <string name="nav_tune">Optimizar</string>
+    <string name="nav_guide">Guía</string>
+    <string name="nav_log">Registro</string>
+    <string name="nav_settings">Ajustes</string>
+
+    <string name="consent_title">¿Iniciar la supervisión?</string>
+    <string name="consent_body">X-KeepAlive lee qué app está en primer plano, solo para seguir el juego que elegiste. El servicio solo se inicia cuando Shizuku está instalado, en ejecución y autorizado. Luego usa comandos ADB documentados: lista blanca de Doze, cubo de espera, estado inactivo y app ops en segundo plano, y vuelve a leer el resultado. El juego no se inicia, cierra ni controla.</string>
+    <string name="consent_start">Iniciar</string>
+    <string name="consent_cancel">Cancelar</string>
+
+    <string name="batt_popup_title">Uso en segundo plano desactivado</string>
+    <string name="batt_popup_body">%1$s puede ser detenido por Android en cualquier momento. Permite el uso en segundo plano para que el juego quede donde lo dejaste.</string>
+    <string name="batt_activate">Activar</string>
+    <string name="batt_close">Cerrar</string>
+
+    <string name="home_subtitle">GESTOR DE APPS EN SEGUNDO PLANO</string>
+    <string name="home_section_title">Segundo plano</string>
+    <string name="home_section_sub">Añade juegos o apps. Solo 4 pueden estar activas.</string>
+    <string name="home_empty">Aún no hay juegos. Añade uno para verlo aquí.</string>
+    <string name="home_status_stopped">Servicio detenido</string>
+    <string name="home_status_on">Segundo plano activado</string>
+    <string name="home_status_applying">Aplicando segundo plano</string>
+    <string name="home_status_shizuku">Necesita Shizuku</string>
+    <string name="home_remove">Quitar</string>
+    <string name="home_add_app">Añadir app</string>
+    <string name="home_note">Un servicio en ejecución no significa que el juego permanezca en memoria.</string>
+    <string name="home_chip_running">Servicio en ejecución</string>
+    <string name="home_chip_stopped">Servicio detenido</string>
+    <string name="home_chip_adb">Conexión ADB no disponible</string>
+    <string name="home_chip_permissions">Permisos faltantes</string>
+    <string name="home_pid">PID actual</string>
+    <string name="home_pid_reading">leyendo</string>
+    <string name="home_foreground">En primer plano</string>
+    <string name="home_shizuku_title">Shizuku</string>
+    <string name="home_install_shizuku">Instalar Shizuku</string>
+    <string name="home_authorize">Autorizar</string>
+    <string name="home_open_shizuku">Abrir Shizuku</string>
+    <string name="home_policy_ok">Política verificada</string>
+    <string name="home_policy_no">Política no verificada</string>
+    <string name="home_policy_ok_mark">OK</string>
+    <string name="home_policy_no_mark">NO</string>
+    <string name="home_recent">Eventos recientes</string>
+
+    <string name="picker_title">Añadir una app</string>
+    <string name="picker_search">Buscar</string>
+    <string name="picker_games">Juegos</string>
+    <string name="picker_all">Todas las apps</string>
+    <string name="picker_no_games">No hay juegos en esta lista. Muchos juegos no se marcan como juegos. Cambia a Todas las apps.</string>
+    <string name="picker_no_results">Sin resultados.</string>
+    <string name="picker_game_suffix">  · juego</string>
+
+    <string name="phase_inactive">Inactivo</string>
+    <string name="phase_waiting">Esperando el juego</string>
+    <string name="phase_foreground">Juego en primer plano</string>
+    <string name="phase_background">Juego en segundo plano</string>
+    <string name="phase_active">Gestión de segundo plano activa</string>
+    <string name="phase_returned">Juego en primer plano otra vez</string>
+    <string name="blocker_permissions">Permisos faltantes</string>
+    <string name="blocker_no_game">Ningún juego seleccionado</string>
+    <string name="outcome_not_checked">Proceso no comprobado</string>
+    <string name="outcome_no_privilege">PID no legible</string>
+    <string name="outcome_in_memory">Proceso aún en memoria</string>
+    <string name="outcome_terminated">Proceso terminado por Android</string>
+    <string name="outcome_recreated">Proceso recreado</string>
+    <string name="outcome_not_running">Proceso no en ejecución</string>
+
+    <string name="event_service_started">Servicio iniciado</string>
+    <string name="event_service_stopped">Servicio detenido</string>
+    <string name="event_phase">Estado</string>
+    <string name="event_process">Proceso</string>
+    <string name="event_limit">Límite</string>
+    <string name="event_policy">Política</string>
+    <string name="event_shizuku">Shizuku</string>
+    <string name="event_boot">Arranque</string>
+    <string name="event_test">Prueba en el dispositivo</string>
+    <string name="event_pid">PID</string>
+    <string name="event_error">Error</string>
+
+    <string name="note_still_in_memory">El proceso del juego sigue en memoria. Si la superficie gráfica se destruyó, el juego aún puede recargarse solo.</string>
+    <string name="note_terminated">El proceso visto en segundo plano ya no existe. Android terminó el juego. Se espera una nueva carga al volver.</string>
+    <string name="note_restarted">El proceso tiene un nuevo PID. El anterior murió y se creó otro. El juego ya recargó el proceso.</string>
+    <string name="note_not_running">Ningún proceso de juego en ejecución.</string>
+    <string name="note_not_running_on_leave">Justo después de pasar a segundo plano, el proceso no está en ejecución.</string>
+    <string name="note_alive_on_leave">El proceso está en memoria justo después de salir. La comprobación útil es al volver al juego.</string>
+    <string name="note_unknown">Sin Shizuku no se puede leer el PID. Un proceso aún en memoria no se distingue de uno terminado por Android.</string>
+    <string name="note_pid_followed">El PID del juego cambió. X-KeepAlive descartó el anterior y ahora sigue el proceso actual.</string>
+
+    <string name="guide_title">Guía de configuración</string>
+    <string name="guide_subtitle">Configura Shizuku y X-KeepAlive</string>
+    <string name="header_ready_title">¡Todo listo!</string>
+    <string name="header_progress_title">¡Casi listo!</string>
+    <string name="header_desc">Sigue los pasos para configurar Shizuku y activar todas las funciones. Tras reiniciar, inicia Shizuku de nuevo.</string>
+    <string name="step_locked_hint">Completa primero los pasos anteriores.</string>
+    <string name="step_show_details">Mostrar instrucciones detalladas</string>
+    <string name="step_hide_details">Ocultar instrucciones detalladas</string>
+    <string name="tip_label">Consejo</string>
+
+    <string name="step_dev_title">Activa las Opciones de desarrollador</string>
+    <string name="step_dev_subtitle">Habilita las opciones necesarias</string>
+    <string name="step_dev_body">Las Opciones de desarrollador están ocultas. Las desbloqueas una vez desde Acerca del teléfono. Si ya están desbloqueadas, este paso se marca solo.</string>
+    <string name="step_dev_tip">En Samsung abre primero Información de software. El menú aparece tras el mensaje.</string>
+    <string name="step_dev_button">Abrir Acerca del teléfono</string>
+
+    <string name="step_wifi_title">Activa la depuración inalámbrica</string>
+    <string name="step_wifi_subtitle">Habilita la depuración inalámbrica</string>
+    <string name="step_wifi_body">Shizuku se inicia con la depuración inalámbrica. Mantén el teléfono con Wi-Fi. La pantalla de vinculación debe permanecer abierta mientras Shizuku se conecta.</string>
+    <string name="step_wifi_tip">Mantén abierta esta pantalla. Shizuku necesita un código nuevo de 6 dígitos.</string>
+    <string name="step_wifi_button">Abrir Opciones de desarrollador</string>
+
+    <string name="step_install_title">Instala Shizuku</string>
+    <string name="step_install_subtitle">Desde Play Store</string>
+    <string name="step_install_body">X-KeepAlive habla con Shizuku, un servicio shell local. El interruptor del servicio permanece apagado hasta que Shizuku esté instalado.</string>
+    <string name="step_install_tip">Instala Shizuku de RikkaApps y vuelve aquí.</string>
+    <string name="step_install_button">Instalar Shizuku</string>
+
+    <string name="step_start_title">Inicia Shizuku</string>
+    <string name="step_start_subtitle">Abre Shizuku y toca Iniciar</string>
+    <string name="step_start_body">Inicia Shizuku con la depuración inalámbrica. Una vinculación hecha antes con un ordenador no cuenta para la app.</string>
+    <string name="step_start_body_legacy">En Android 10 o inferior no hay depuración inalámbrica. Inicia Shizuku desde un ordenador por ADB.</string>
+    <string name="step_start_tip">Si ya vinculaste Shizuku, solo toca Iniciar. Solo tendrás que vincular de nuevo tras reiniciar.</string>
+    <string name="step_start_button">Abrir Shizuku</string>
+
+    <string name="step_auth_title">Autoriza X-KeepAlive</string>
+    <string name="step_auth_subtitle">Concede el permiso en Shizuku</string>
+    <string name="step_auth_body">Shizuku pregunta una vez por app. Nada funciona hasta que lo permites. Denegarlo mantiene el servicio apagado, pero no rompe la app.</string>
+    <string name="step_auth_tip">Toca Permitir en el aviso de Shizuku. Denegarlo mantiene el servicio apagado.</string>
+    <string name="step_auth_button">Autorizar Shizuku</string>
+
+    <string name="step_usage_title">Permite el acceso a uso</string>
+    <string name="step_usage_subtitle">Para mayor estabilidad</string>
+    <string name="step_usage_body">X-KeepAlive lee qué app está en primer plano para seguir solo los juegos activados. Nada más se registra.</string>
+    <string name="step_usage_tip">Busca X-KeepAlive en la lista y activa el interruptor.</string>
+    <string name="step_usage_button">Abrir acceso a uso</string>
+
+    <string name="step_notif_title">Permite las notificaciones</string>
+    <string name="step_notif_subtitle">Para recibir eventos</string>
+    <string name="step_notif_body">Android solo mantiene vivo el servicio en primer plano mientras su notificación está visible. Sin ella, el sistema detiene la supervisión.</string>
+    <string name="step_notif_tip">Sin su notificación, Android detiene el servicio.</string>
+    <string name="step_notif_button">Permitir notificación</string>
+
+    <string name="step_power_title">Ajusta la batería de X-KeepAlive</string>
+    <string name="step_power_subtitle">Mantén activa la supervisión</string>
+    <string name="step_power_body">Android puede pausar el propio X-KeepAlive para ahorrar batería. Con Sin restricciones la supervisión sigue activa.</string>
+    <string name="step_power_tip">Elige Sin restricciones para que Android no pause la supervisión.</string>
+    <string name="step_power_button">Abrir ajustes de batería</string>
+
+    <string name="step_gamebatt_title">Ajusta la batería del juego</string>
+    <string name="step_gamebatt_subtitle">Permite actividad en segundo plano</string>
+    <string name="step_gamebatt_body">Cada juego también necesita batería Sin restricciones, o Android lo detiene en segundo plano pase lo que pase. Al añadir un juego se abren sus ajustes automáticamente.</string>
+    <string name="step_gamebatt_tip">Pon cada juego en Sin restricciones, uno por uno.</string>
+    <string name="step_gamebatt_button">Abrir ajustes del juego</string>
+
+    <string name="step_apps_title">Elige las apps a mantener</string>
+    <string name="step_apps_subtitle">Selecciona hasta 4 juegos o apps</string>
+    <string name="step_apps_body">Añade los juegos o apps entre los que cambias. Cada fila muestra su icono y un interruptor. Solo 4 pueden estar activas a la vez.</string>
+    <string name="step_apps_tip">Activa hasta 4 interruptores en Inicio. Los demás quedan apagados.</string>
+    <string name="step_apps_button">Abrir Inicio</string>
+
+    <string name="step_service_title">Activa el servicio de supervisión</string>
+    <string name="step_service_subtitle">Enciende el servicio</string>
+    <string name="step_service_body">El interruptor junto al contador en Inicio lo inicia y detiene todo. Permanece apagado hasta completar los pasos anteriores.</string>
+    <string name="step_service_tip">Usa el interruptor junto al contador en Inicio y acepta el aviso.</string>
+    <string name="step_service_button">Abrir Inicio</string>
+
+    <string name="info_reboot_title">Tras reiniciar</string>
+    <string name="info_reboot_body">La depuración inalámbrica y Shizuku se apagan. Abre Shizuku y toca Iniciar, luego vuelve aquí.</string>
+    <string name="info_battery_title">Ajustes de batería</string>
+    <string name="info_battery_body">Pon X-KeepAlive y tus juegos en Sin restricciones para que Android no los detenga.</string>
+    <string name="info_cannot_title">Lo que no puede hacer</string>
+    <string name="info_cannot_body">No juega por ti, no simula toques ni usa accesibilidad. Solo mantiene activas las apps elegidas.</string>
+    <string name="info_privacy_title">Privacidad</string>
+    <string name="info_privacy_body">Tu selección y el registro quedan en el teléfono. Sin cuenta y sin enviar datos a ningún servidor.</string>
+
+    <string name="gtk_title">Conviene saber</string>
+    <string name="gtk_subtitle">Información importante y preguntas</string>
+    <string name="gtk_dev">Si faltan las Opciones de desarrollador: abre Ajustes, Acerca del teléfono, Información de software (Samsung, Xiaomi) y toca Número de compilación 7 veces.</string>
+    <string name="gtk_pair">Una vinculación hecha con un ordenador no cuenta para la app. Vincula el propio Shizuku por depuración inalámbrica.</string>
+    <string name="gtk_deny">Denegar un permiso solo mantiene el servicio apagado. La app sigue usable y podrás permitirlo después.</string>
+
+    <string name="setup_skip">Omitir por ahora</string>
+    <string name="setup_finish">Empezar a usar la app</string>
+
+    <string name="settings_title">Ajustes</string>
+    <string name="settings_permissions">Permisos</string>
+    <string name="settings_usage">Acceso a uso</string>
+    <string name="settings_granted">concedido</string>
+    <string name="settings_missing">faltante</string>
+    <string name="settings_notifications">Notificaciones</string>
+    <string name="settings_own_battery">Batería de X-KeepAlive</string>
+    <string name="settings_unrestricted">sin restricciones</string>
+    <string name="settings_optimized">optimizada</string>
+    <string name="settings_game_battery">Batería del juego elegido</string>
+    <string name="settings_reboot_title">Tras reiniciar</string>
+    <string name="settings_reboot_body">Reinicia la supervisión solo si Shizuku ya está en ejecución y autorizado. Shizuku y la depuración inalámbrica no se inician solos.</string>
+    <string name="settings_interval">Intervalo de lectura: %1$.1f s</string>
+    <string name="settings_interval_note">Con la pantalla apagada, el intervalo no baja de 8 segundos.</string>
+    <string name="settings_verify">Verificación en el dispositivo</string>
+    <string name="settings_developed">Desarrollado por Layiix</string>
+    <string name="settings_version">X-KeepAlive %1$s</string>
+    <string name="settings_language">Idioma</string>
+    <string name="settings_language_sub">La app se reinicia para aplicar el idioma.</string>
+    <string name="lang_pick_title">Elige tu idioma</string>
+    <string name="lang_pick_sub">La app se reiniciará en el idioma elegido.</string>
+
+    <string name="log_title">Registro</string>
+    <string name="log_subtitle">Solo en este teléfono. Un comando se marca hecho solo tras leer su salida.</string>
+    <string name="log_filter">Filtrar</string>
+    <string name="log_clear">Borrar registro</string>
+    <string name="log_empty">Sin eventos.</string>
+
+    <string name="verify_title">Verificación</string>
+    <string name="verify_subtitle">Registras estos resultados en el teléfono tras jugar. La app no inventa ningún resultado.</string>
+    <string name="verify_sequence">Secuencia</string>
+    <string name="verify_sequence_body">Abre el juego, inicia X-KeepAlive, ve a Inicio, abre WhatsApp o Chrome, espera y vuelve al juego. Anota si el proceso sigue en memoria y si el servicio o Shizuku se detuvieron. Repite a 1, 5 y 10 minutos y con distintas apps en primer plano. Repite tras cerrar Shizuku y tras reiniciar.</string>
+    <string name="verify_wait">Espera</string>
+    <string name="verify_wait_1">1 minuto</string>
+    <string name="verify_wait_5">5 minutos</string>
+    <string name="verify_wait_10">10 minutos</string>
+    <string name="verify_fg">App en primer plano</string>
+    <string name="verify_fg_home">Inicio</string>
+    <string name="verify_fg_other">Otra</string>
+    <string name="verify_process">Proceso del juego</string>
+    <string name="verify_proc_mem">Aún en memoria</string>
+    <string name="verify_proc_killed">Terminado por Android</string>
+    <string name="verify_proc_unknown">No legible</string>
+    <string name="verify_svc">Servicio X-KeepAlive</string>
+    <string name="verify_svc_on">Sigue en ejecución</string>
+    <string name="verify_svc_off">Terminado por Android</string>
+    <string name="verify_shizuku">Shizuku</string>
+    <string name="verify_sh_ok">Disponible</string>
+    <string name="verify_sh_off">Detenido</string>
+    <string name="verify_sh_unused">No usado</string>
+    <string name="verify_notes">Notas</string>
+    <string name="verify_save">Guardar este resultado</string>
+    <string name="verify_saved">Resultados guardados</string>
+
+    <string name="test_wait">Espera: %1$s</string>
+    <string name="test_foreground">App en primer plano: %1$s</string>
+    <string name="test_process">Proceso: %1$s</string>
+    <string name="test_service">Servicio X-KeepAlive: %1$s</string>
+    <string name="test_shizuku">Shizuku: %1$s</string>
+
+    <string name="msg_package_invalid">Paquete no utilizable.</string>
+    <string name="msg_already_in_list">%1$s ya está en la lista.</string>
+    <string name="msg_list_full">La lista está llena.</string>
+    <string name="msg_added">%1$s añadido.</string>
+    <string name="msg_battery_hint">Pon la batería de %1$s en Sin restricciones para que Android no lo detenga.</string>
+    <string name="msg_group_hint">Deja encendidas las apps que quieras. Este interruptor solo inicia y detiene el servicio.</string>
+    <string name="msg_max_active">Solo 4 apps pueden estar activas. Apaga una primero.</string>
+    <string name="msg_grant_usage">Concede el acceso a uso a X-KeepAlive y vuelve a activar el interruptor.</string>
+    <string name="msg_add_game_first">Añade primero un juego.</string>
+    <string name="msg_no_notification">Sin la notificación, Android no mantendrá el servicio en primer plano.</string>
+    <string name="msg_shizuku_not_running">Shizuku no está en ejecución. Ábrelo e inícialo con la depuración inalámbrica.</string>
+    <string name="msg_shizuku_already">La autorización de Shizuku ya está concedida.</string>
+    <string name="msg_shizuku_request_failed">Falló la solicitud a Shizuku.</string>
+    <string name="msg_choose_game_first">Elige primero un juego.</string>
+    <string name="msg_dev_options_failed">No se pudieron abrir las Opciones de desarrollador. Actívalas desde Acerca del teléfono.</string>
+    <string name="msg_about_failed">No se pudo abrir Acerca del teléfono.</string>
+    <string name="msg_shizuku_missing">Shizuku no está instalado.</string>
+    <string name="msg_store_failed">No se pudo abrir Play Store.</string>
+    <string name="msg_test_saved">Resultado guardado en el registro local.</string>
+    <string name="msg_stop_failed">Servicio no detenido.</string>
+    <string name="msg_already_unrestricted">La batería ya está Sin restricciones.</string>
+    <string name="msg_start_failed">Android rechazó iniciar el servicio.</string>
+    <string name="msg_svc_no_install">Shizuku no está instalado.</string>
+    <string name="msg_svc_not_running">Shizuku no está en ejecución. Inícialo antes de encender el servicio.</string>
+    <string name="msg_svc_no_auth">Autoriza Shizuku antes de encender el servicio.</string>
+    <string name="msg_leftover_restored">Política restante de %1$s restaurada.</string>
+    <string name="msg_leftover_not_restored">Política restante de %1$s no restaurada (%2$s).</string>
+
+    <string name="log_monitoring_started">Supervisión iniciada. El servicio por sí solo no mantiene vivo el juego.</string>
+    <string name="log_shizuku_stopped">Shizuku detenido. El servicio se apagó.</string>
+    <string name="log_service_idle">El servicio permanece apagado hasta que Shizuku esté en ejecución y autorizado.</string>
+    <string name="log_policy_unverified">Política ya no verificada para %1$s.</string>
+    <string name="log_monitoring_stopped">Supervisión detenida.</string>
+    <string name="log_boot_idle">Sin restauración automática. Shizuku y la depuración inalámbrica no se reinician solos.</string>
+    <string name="log_boot_no_permissions">Automatización guardada, pero faltan permisos. Abre X-KeepAlive y vuelve a activarla.</string>
+    <string name="log_boot_no_shizuku">Shizuku no está en ejecución. El servicio no se inició. Las apps elegidas siguen activas.</string>
+    <string name="log_boot_restarted">Supervisión reiniciada para %1$s.</string>
+
+    <string name="shizuku_not_installed">Shizuku no está instalado.</string>
+    <string name="shizuku_stopped">Shizuku está instalado, pero su servicio está detenido. La app no ve la vinculación inalámbrica hasta que inicies Shizuku.</string>
+    <string name="shizuku_running">Shizuku en ejecución y autorizado</string>
+    <string name="shizuku_running_api">Shizuku en ejecución y autorizado (API %1$d)</string>
+    <string name="shizuku_needs_auth">Shizuku está en ejecución. Necesita tu autorización, que no se solicita sola.</string>
+    <string name="widget_desc">Interruptor de X-KeepAlive</string>
+    <string name="widget_on">Activado</string>
+    <string name="widget_off">Apagado</string>
+    <string name="widget_status_on">SERVICIO ACTIVO</string>
+    <string name="widget_status_off">SERVICIO DETENIDO</string>
+    <plurals name="widget_watched">
+        <item quantity="one">%d app supervisada</item>
+        <item quantity="other">%d apps supervisadas</item>
+    </plurals>
+
+    <!-- Optimización del teléfono: batería y rapidez, nunca los juegos supervisados -->
+    <string name="tune_title">Optimización del teléfono</string>
+    <string name="tune_sub">Ahorra batería y agiliza el teléfono con comandos ADB documentados. Todo es reversible.</string>
+    <string name="tune_note">Los juegos supervisados siempre están excluidos.</string>
+    <string name="tune_anims_title">Animaciones rápidas</string>
+    <string name="tune_anims_body">Ajusta las escalas de animación a 0,5x. Al desactivarlo se restauran tus valores originales.</string>
+    <string name="tune_drain_title">Apps que gastan batería</string>
+    <string name="tune_drain_body">Restringe la espera y el uso en segundo plano de las apps que elijas. Al quitar una se restauran sus valores originales.</string>
+    <string name="tune_drain_empty">Aún no hay apps restringidas.</string>
+    <string name="tune_drain_add">Restringir una app</string>
+    <string name="tune_bloat_title">Desactivar bloatware</string>
+    <string name="tune_bloat_body">Desactiva las apps que elijas. Desaparecen y dejan de gastar batería. Reactívalas aquí cuando quieras.</string>
+    <string name="tune_bloat_empty">X-KeepAlive no ha desactivado ninguna app.</string>
+    <string name="tune_bloat_add">Desactivar una app</string>
+    <string name="tune_bloat_enable">Activar</string>
+    <string name="tune_cache_title">Liberar memoria</string>
+    <string name="tune_cache_body">Recorta los procesos en caché para liberar RAM ahora mismo. Seguro, Android reconstruye las cachés según necesite.</string>
+    <string name="tune_cache_button">Recortar cachés ahora</string>
+    <string name="tune_remove">Quitar</string>
+    <string name="tune_search_title">Elige una app</string>
+    <string name="tune_search">Buscar</string>
+    <string name="tune_no_results">Sin resultados.</string>
+    <string name="msg_tune_anims_on">Animaciones rápidas activadas.</string>
+    <string name="msg_tune_anims_off">Escalas originales restauradas.</string>
+    <string name="msg_tune_drain_on">%1$s restringida.</string>
+    <string name="msg_tune_disabled">%1$s desactivada.</string>
+    <string name="msg_tune_enabled">%1$s activada de nuevo.</string>
+    <string name="msg_tune_cache">Cachés recortadas.</string>
+    <string name="msg_tune_failed">Falló la optimización. Comprueba que Shizuku esté en ejecución y autorizado.</string>
+
+    <!-- Recomendaciones según el uso real -->
+    <string name="tune_adv_title">Recomendado para ti</string>
+    <string name="tune_adv_body">Según tu uso real: apps que nunca abres o casi nunca. Los juegos y X-KeepAlive nunca aparecen.</string>
+    <string name="tune_adv_need_usage">Concede el acceso a datos de uso desde la Guía para ver recomendaciones personalizadas.</string>
+    <string name="tune_adv_empty">Nada que sugerir: cada app se usa o ya está gestionada.</string>
+    <string name="tune_adv_apply_all">Aplicar todo</string>
+    <string name="msg_tune_batch">Listo: %1$d desactivadas, %2$d restringidas, %3$d fallidas.</string>
+    <string name="tune_adv_limit">Limitar</string>
+    <string name="tune_adv_disable">Desactivar</string>
+    <string name="tune_adv_never">nunca abierta en 7 días</string>
+    <string name="tune_adv_minutes">%d min en 7 días</string>
+    <string name="tune_adv_hours">%d h %d min en 7 días</string>
+    <string name="tune_reason_bloat">Preinstalada y nunca usada — seguro desactivarla.</string>
+    <string name="tune_reason_unused">Nunca usada — seguro desactivarla.</string>
+    <string name="tune_reason_rare">Poco usada — limita su segundo plano.</string>
+</resources>

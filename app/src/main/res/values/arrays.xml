@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="step_dev_details">
+        <item>1. Open Settings, then About phone.</item>
+        <item>2. Open Software information (on Samsung, Xiaomi and others the Build number lives there).</item>
+        <item>3. Tap Build number 7 times in a row.</item>
+        <item>4. Enter your screen lock (PIN, pattern or password) if Android asks for it.</item>
+        <item>5. Wait for the message “You are now a developer”.</item>
+        <item>6. Go back to Settings, open System, then Developer options to confirm the new menu exists.</item>
+    </string-array>
+    <string-array name="step_wifi_details">
+        <item>1. Open Settings, then System, then Developer options.</item>
+        <item>2. Turn on Wireless debugging and confirm with Allow.</item>
+        <item>3. Stay on the Wireless debugging page.</item>
+        <item>4. Tap “Pair device with pairing code” to show the 6-digit code.</item>
+        <item>5. Leave this screen visible. You will type the code into Shizuku in the next steps.</item>
+        <item>Tip: after a reboot this switch turns off. Come back here and turn it on again.</item>
+    </string-array>
+    <string-array name="step_install_details">
+        <item>1. Tap the button below to open the Shizuku page on the Play Store.</item>
+        <item>2. Install “Shizuku” by RikkaApps.</item>
+        <item>3. Return to X-KeepAlive. This step completes on its own once the package is found.</item>
+    </string-array>
+    <string-array name="step_start_details">
+        <item>1. Open Shizuku and tap Pairing, then “Start via Wireless debugging”.</item>
+        <item>2. Tap “Pair device with pairing code” inside Shizuku if it asks.</item>
+        <item>3. Type the 6-digit code shown on the Wireless debugging page.</item>
+        <item>4. Wait for “Pairing successful”, then go back in Shizuku and tap Start.</item>
+        <item>5. Return here. The status becomes “Shizuku is running”.</item>
+        <item>If pairing fails, turn Wireless debugging off and on again and request a fresh code.</item>
+    </string-array>
+    <string-array name="step_start_legacy_details">
+        <item>1. Install ADB on a computer and connect the phone with USB debugging enabled.</item>
+        <item>2. Open Shizuku and follow “Start via ADB”.</item>
+        <item>3. Return here once Shizuku reports it is running.</item>
+    </string-array>
+    <string-array name="step_auth_details">
+        <item>1. Tap the button below.</item>
+        <item>2. In the Shizuku prompt, tap Allow (ideally “Allow all the time”).</item>
+        <item>3. Return here. The step completes when Shizuku reports permission granted.</item>
+    </string-array>
+    <string-array name="step_usage_details">
+        <item>1. Tap the button below to open Usage access.</item>
+        <item>2. Find X-KeepAlive in the list and turn on “Permit usage access”.</item>
+        <item>3. Come back. The step completes automatically.</item>
+    </string-array>
+    <string-array name="step_notif_details">
+        <item>1. Tap the button below.</item>
+        <item>2. Tap Allow on the system prompt.</item>
+        <item>3. The X-KeepAlive status notification stays visible while monitoring runs.</item>
+    </string-array>
+    <string-array name="step_power_details">
+        <item>1. Tap the button below to open the battery settings.</item>
+        <item>2. Choose “Unrestricted” (on some phones: “Don’t optimize”).</item>
+        <item>3. Come back. This step completes on its own once Android reports it.</item>
+    </string-array>
+    <string-array name="step_gamebatt_details">
+        <item>1. Tap the button below to open the battery settings of an added game.</item>
+        <item>2. Choose “Unrestricted” for that game.</item>
+        <item>3. Repeat for every game you keep in the background.</item>
+    </string-array>
+    <string-array name="step_apps_details">
+        <item>1. Tap Open Home below.</item>
+        <item>2. Tap Add app and pick a game from the list.</item>
+        <item>3. Turn its switch on. Repeat for up to 4 apps.</item>
+        <item>4. Come back here. This step finishes when at least one switch is on.</item>
+    </string-array>
+    <string-array name="step_service_details">
+        <item>1. On Home, turn on the switch next to the “0/4” counter.</item>
+        <item>2. Accept the “Start monitoring?” prompt.</item>
+        <item>3. The status changes to “Background management active” once Shizuku confirms a policy.</item>
+    </string-array>
+</resources>

@@ -1,0 +1,370 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name" translatable="false">X-KeepAlive</string>
+    <string name="notification_channel">X-KeepAlive monitoring</string>
+    <string name="notification_channel_description">Status of the selected game. It does not cover the game.</string>
+    <string name="notification_stop">Stop</string>
+    <string name="notif_starting">Starting monitoring</string>
+    <string name="notif_no_game">No game</string>
+
+    <!-- Bottom navigation -->
+    <string name="nav_home">Home</string>
+    <string name="nav_tune">Tune</string>
+    <string name="nav_guide">Guide</string>
+    <string name="nav_log">Log</string>
+    <string name="nav_settings">Settings</string>
+
+    <!-- Consent dialog -->
+    <string name="consent_title">Start monitoring?</string>
+    <string name="consent_body">X-KeepAlive reads which app is in the foreground, only to follow the game you chose. The service starts only when Shizuku is installed, running, and authorized. It then uses documented ADB commands: Doze whitelist, standby bucket, idle state, and background app ops, then reads the result back. The game is not started, closed, or controlled.</string>
+    <string name="consent_start">Start</string>
+    <string name="consent_cancel">Cancel</string>
+
+    <!-- Battery popup shown when a new game has background use off -->
+    <string name="batt_popup_title">Background use is off</string>
+    <string name="batt_popup_body">%1$s can be stopped by Android at any time. Allow background use so the game stays where you left it.</string>
+    <string name="batt_activate">Activate</string>
+    <string name="batt_close">Close</string>
+
+    <!-- Home -->
+    <string name="home_subtitle">BACKGROUND APP MANAGER</string>
+    <string name="home_section_title">Background</string>
+    <string name="home_section_sub">Add games or apps. Only 4 can be active.</string>
+    <string name="home_empty">No games yet. Add one to see it here.</string>
+    <string name="home_status_stopped">Service stopped</string>
+    <string name="home_status_on">Background on</string>
+    <string name="home_status_applying">Applying background</string>
+    <string name="home_status_shizuku">Needs Shizuku</string>
+    <string name="home_remove">Remove</string>
+    <string name="home_add_app">Add app</string>
+    <string name="home_note">A running service does not mean the game stays in memory.</string>
+    <string name="home_chip_running">Service running</string>
+    <string name="home_chip_stopped">Service stopped</string>
+    <string name="home_chip_adb">ADB connection unavailable</string>
+    <string name="home_chip_permissions">Permissions missing</string>
+    <string name="home_pid">Current PID</string>
+    <string name="home_pid_reading">reading</string>
+    <string name="home_foreground">In foreground</string>
+    <string name="home_shizuku_title">Shizuku</string>
+    <string name="home_install_shizuku">Install Shizuku</string>
+    <string name="home_authorize">Authorize</string>
+    <string name="home_open_shizuku">Open Shizuku</string>
+    <string name="home_policy_ok">Policy verified</string>
+    <string name="home_policy_no">Policy not verified</string>
+    <string name="home_policy_ok_mark">OK</string>
+    <string name="home_policy_no_mark">NO</string>
+    <string name="home_recent">Recent events</string>
+
+    <!-- App picker -->
+    <string name="picker_title">Add an app</string>
+    <string name="picker_search">Search</string>
+    <string name="picker_games">Games</string>
+    <string name="picker_all">All apps</string>
+    <string name="picker_no_games">No games in this list. Many games do not mark themselves as games. Switch to All apps.</string>
+    <string name="picker_no_results">No results.</string>
+    <string name="picker_game_suffix">  · game</string>
+
+    <!-- Engine states -->
+    <string name="phase_inactive">Inactive</string>
+    <string name="phase_waiting">Waiting for the game</string>
+    <string name="phase_foreground">Game in the foreground</string>
+    <string name="phase_background">Game in the background</string>
+    <string name="phase_active">Background management active</string>
+    <string name="phase_returned">Game in the foreground again</string>
+    <string name="blocker_permissions">Permissions missing</string>
+    <string name="blocker_no_game">No game selected</string>
+    <string name="outcome_not_checked">Process not checked</string>
+    <string name="outcome_no_privilege">PID not readable</string>
+    <string name="outcome_in_memory">Process still in memory</string>
+    <string name="outcome_terminated">Process terminated by Android</string>
+    <string name="outcome_recreated">Process recreated</string>
+    <string name="outcome_not_running">Process not running</string>
+
+    <!-- Event log kinds -->
+    <string name="event_service_started">Service started</string>
+    <string name="event_service_stopped">Service stopped</string>
+    <string name="event_phase">Status</string>
+    <string name="event_process">Process</string>
+    <string name="event_limit">Limit</string>
+    <string name="event_policy">Policy</string>
+    <string name="event_shizuku">Shizuku</string>
+    <string name="event_boot">Boot</string>
+    <string name="event_test">On-device test</string>
+    <string name="event_pid">PID</string>
+    <string name="event_error">Error</string>
+
+    <!-- Engine diagnostics shown in the interface -->
+    <string name="note_still_in_memory">The game process is still in memory. If the graphics surface was destroyed, the game can still reload on its own.</string>
+    <string name="note_terminated">The process seen in the background is gone. Android terminated the game. A new load is expected when you return.</string>
+    <string name="note_restarted">The process has a new PID. The previous one died and another was created. The game already reloaded the process.</string>
+    <string name="note_not_running">No game process is running.</string>
+    <string name="note_not_running_on_leave">Right after moving to the background, the process is not running.</string>
+    <string name="note_alive_on_leave">The process is in memory right after you leave. The useful check is when you return to the game.</string>
+    <string name="note_unknown">Without Shizuku the PID cannot be read. A process still in memory cannot be told apart from one Android terminated.</string>
+    <string name="note_pid_followed">The game PID changed. X-KeepAlive dropped the old one and now follows the current process.</string>
+
+    <!-- Setup guide -->
+    <string name="guide_title">Setup guide</string>
+    <string name="guide_subtitle">Set up Shizuku and X-KeepAlive</string>
+    <string name="header_ready_title">You\'re all set!</string>
+    <string name="header_progress_title">Almost there!</string>
+    <string name="header_desc">Follow the steps to set up Shizuku and enable all features. After a reboot, start Shizuku again.</string>
+    <string name="step_locked_hint">Complete the steps above first.</string>
+    <string name="step_show_details">Show detailed instructions</string>
+    <string name="step_hide_details">Hide detailed instructions</string>
+    <string name="tip_label">Tip</string>
+
+    <string name="step_dev_title">Turn on Developer options</string>
+    <string name="step_dev_subtitle">Enable required options</string>
+    <string name="step_dev_body">Developer options are hidden by default. You unlock them once from About phone. If they are already unlocked, this step is marked as done automatically.</string>
+    <string name="step_dev_tip">On Samsung open Software information first. The Developer options menu appears after the toast.</string>
+    <string name="step_dev_button">Open About phone</string>
+
+    <string name="step_wifi_title">Turn on Wireless debugging</string>
+    <string name="step_wifi_subtitle">Enable wireless debugging</string>
+    <string name="step_wifi_body">Shizuku starts through Wireless debugging. Keep your phone on Wi-Fi. The pairing screen must stay open while Shizuku connects.</string>
+    <string name="step_wifi_tip">Keep this screen open. Shizuku needs a fresh 6-digit code to pair.</string>
+    <string name="step_wifi_button">Open Developer options</string>
+
+    <string name="step_install_title">Install Shizuku</string>
+    <string name="step_install_subtitle">From Play Store</string>
+    <string name="step_install_body">X-KeepAlive talks to Shizuku, which runs as a local shell service. The service switch stays off until Shizuku is installed.</string>
+    <string name="step_install_tip">Install Shizuku by RikkaApps, then come back here.</string>
+    <string name="step_install_button">Install Shizuku</string>
+
+    <string name="step_start_title">Start Shizuku</string>
+    <string name="step_start_subtitle">Open Shizuku and tap Start</string>
+    <string name="step_start_body">Start Shizuku with Wireless debugging. A pairing you made earlier with a computer does not count for the app.</string>
+    <string name="step_start_body_legacy">On Android 10 and below there is no Wireless debugging. Start Shizuku from a computer over ADB.</string>
+    <string name="step_start_tip">If you already paired Shizuku, just tap Start. You only need to pair again after a reboot.</string>
+    <string name="step_start_button">Open Shizuku</string>
+
+    <string name="step_auth_title">Authorize X-KeepAlive</string>
+    <string name="step_auth_subtitle">Grant permission in Shizuku</string>
+    <string name="step_auth_body">Shizuku asks you once per app. Nothing runs until you allow it. A denial keeps the service off but does not break the app.</string>
+    <string name="step_auth_tip">Tap Allow in the Shizuku prompt. A denial keeps the service off.</string>
+    <string name="step_auth_button">Authorize Shizuku</string>
+
+    <string name="step_usage_title">Allow usage access</string>
+    <string name="step_usage_subtitle">For better stability</string>
+    <string name="step_usage_body">X-KeepAlive reads which app is in the foreground so it follows only the games you switch on. Nothing else is tracked.</string>
+    <string name="step_usage_tip">Find X-KeepAlive in the list and turn the switch on.</string>
+    <string name="step_usage_button">Open usage access</string>
+
+    <string name="step_notif_title">Allow notifications</string>
+    <string name="step_notif_subtitle">To receive events</string>
+    <string name="step_notif_body">Android only keeps the foreground service alive while its notification is visible. Without it the system stops monitoring.</string>
+    <string name="step_notif_tip">Android stops the service without its notification.</string>
+    <string name="step_notif_button">Allow notification</string>
+
+    <string name="step_power_title">Set the X-KeepAlive battery</string>
+    <string name="step_power_subtitle">Keep monitoring alive</string>
+    <string name="step_power_body">Android can pause X-KeepAlive itself to save battery. Setting it to Unrestricted keeps the monitoring service running.</string>
+    <string name="step_power_tip">Choose Unrestricted so Android does not pause monitoring.</string>
+    <string name="step_power_button">Open battery settings</string>
+
+    <string name="step_gamebatt_title">Set the game battery</string>
+    <string name="step_gamebatt_subtitle">Allow background activity</string>
+    <string name="step_gamebatt_body">Each game also needs Unrestricted battery, or Android stops it in the background no matter what. Adding a game now opens its settings automatically.</string>
+    <string name="step_gamebatt_tip">Set every game to Unrestricted, one by one.</string>
+    <string name="step_gamebatt_button">Open game settings</string>
+
+    <string name="step_apps_title">Choose apps to keep</string>
+    <string name="step_apps_subtitle">Select up to 4 games or apps</string>
+    <string name="step_apps_body">Add the games or apps you switch between. Each row shows its icon and a switch. Only 4 can be active at once.</string>
+    <string name="step_apps_tip">Turn on up to 4 switches on Home. The rest stay off.</string>
+    <string name="step_apps_button">Open Home</string>
+
+    <string name="step_service_title">Enable monitoring service</string>
+    <string name="step_service_subtitle">Turn on the service</string>
+    <string name="step_service_body">The switch next to the counter on Home starts and stops everything. It stays off until all steps above are done.</string>
+    <string name="step_service_tip">Use the switch next to the counter on Home, then accept the prompt.</string>
+    <string name="step_service_button">Open Home</string>
+
+    <!-- Info cards -->
+    <string name="info_reboot_title">After a reboot</string>
+    <string name="info_reboot_body">Wireless debugging and Shizuku turn off. Open Shizuku and tap Start, then return here.</string>
+    <string name="info_battery_title">Battery settings</string>
+    <string name="info_battery_body">Set X-KeepAlive and your games to Unrestricted to prevent Android from stopping them.</string>
+    <string name="info_cannot_title">What it cannot do</string>
+    <string name="info_cannot_body">It does not play for you, simulate taps, or use an accessibility service. It only keeps selected apps active.</string>
+    <string name="info_privacy_title">Privacy</string>
+    <string name="info_privacy_body">Your selection and event log stay on the phone. No account is required and no data is sent to any server.</string>
+
+    <!-- Good to know -->
+    <string name="gtk_title">Good to know</string>
+    <string name="gtk_subtitle">Important information and FAQs</string>
+    <string name="gtk_dev">If Developer options are missing: open Settings, About phone, then Software information (Samsung, Xiaomi), and tap Build number 7 times.</string>
+    <string name="gtk_pair">A pairing made with a computer does not count for the app. Pair Shizuku itself through Wireless debugging.</string>
+    <string name="gtk_deny">Denying a permission only keeps the service off. The app stays usable and you can allow it later.</string>
+
+    <!-- First-launch setup -->
+    <string name="setup_skip">Skip for now</string>
+    <string name="setup_finish">Start using the app</string>
+
+    <!-- Settings -->
+    <string name="settings_title">Settings</string>
+    <string name="settings_permissions">Permissions</string>
+    <string name="settings_usage">Usage access</string>
+    <string name="settings_granted">granted</string>
+    <string name="settings_missing">missing</string>
+    <string name="settings_notifications">Notifications</string>
+    <string name="settings_own_battery">X-KeepAlive battery</string>
+    <string name="settings_unrestricted">unrestricted</string>
+    <string name="settings_optimized">optimized</string>
+    <string name="settings_game_battery">Selected game battery</string>
+    <string name="settings_reboot_title">After reboot</string>
+    <string name="settings_reboot_body">Starts the service again only if Shizuku is already running and authorized. Shizuku and wireless debugging do not start on their own.</string>
+    <string name="settings_interval">Read interval: %1$.1f s</string>
+    <string name="settings_interval_note">With the screen off, the interval does not go below 8 seconds.</string>
+    <string name="settings_verify">On-device verification</string>
+    <string name="settings_developed">Developed by Layiix</string>
+    <string name="settings_version">X-KeepAlive %1$s</string>
+    <string name="settings_language">Language</string>
+    <string name="settings_language_sub">The app restarts to apply the new language.</string>
+    <string name="lang_pick_title">Choose your language</string>
+    <string name="lang_pick_sub">The app will restart in the selected language.</string>
+
+    <!-- Log -->
+    <string name="log_title">Log</string>
+    <string name="log_subtitle">Stored only on this phone. A command is marked done only after its output was read.</string>
+    <string name="log_filter">Filter</string>
+    <string name="log_clear">Clear log</string>
+    <string name="log_empty">No events.</string>
+
+    <!-- On-device verification -->
+    <string name="verify_title">Verification</string>
+    <string name="verify_subtitle">You record these results on the phone after playing. The app does not invent an outcome.</string>
+    <string name="verify_sequence">Sequence</string>
+    <string name="verify_sequence_body">Open the game, start X-KeepAlive, go Home, open WhatsApp or Chrome, wait, then return to the game. Note whether the process is still in memory and whether the service or Shizuku stopped. Repeat at 1, 5, and 10 minutes, and with different foreground apps. Repeat after closing Shizuku and after a reboot.</string>
+    <string name="verify_wait">Wait</string>
+    <string name="verify_wait_1">1 minute</string>
+    <string name="verify_wait_5">5 minutes</string>
+    <string name="verify_wait_10">10 minutes</string>
+    <string name="verify_fg">Foreground app</string>
+    <string name="verify_fg_home">Home</string>
+    <string name="verify_fg_other">Other</string>
+    <string name="verify_process">Game process</string>
+    <string name="verify_proc_mem">Still in memory</string>
+    <string name="verify_proc_killed">Terminated by Android</string>
+    <string name="verify_proc_unknown">Not readable</string>
+    <string name="verify_svc">X-KeepAlive service</string>
+    <string name="verify_svc_on">Still running</string>
+    <string name="verify_svc_off">Terminated by Android</string>
+    <string name="verify_shizuku">Shizuku</string>
+    <string name="verify_sh_ok">Available</string>
+    <string name="verify_sh_off">Stopped</string>
+    <string name="verify_sh_unused">Not used</string>
+    <string name="verify_notes">Notes</string>
+    <string name="verify_save">Save this result</string>
+    <string name="verify_saved">Saved results</string>
+
+    <!-- Test record labels saved in the log -->
+    <string name="test_wait">Wait: %1$s</string>
+    <string name="test_foreground">Foreground app: %1$s</string>
+    <string name="test_process">Process: %1$s</string>
+    <string name="test_service">X-KeepAlive service: %1$s</string>
+    <string name="test_shizuku">Shizuku: %1$s</string>
+
+    <!-- Messages -->
+    <string name="msg_package_invalid">Package cannot be used.</string>
+    <string name="msg_already_in_list">%1$s is already in the list.</string>
+    <string name="msg_list_full">The list is full.</string>
+    <string name="msg_added">Added %1$s.</string>
+    <string name="msg_battery_hint">Set %1$s battery to Unrestricted so Android does not stop it.</string>
+    <string name="msg_group_hint">Leave the apps you want switched on. This switch only starts and stops the service.</string>
+    <string name="msg_max_active">Only 4 apps can be active. Turn one off first.</string>
+    <string name="msg_grant_usage">Grant usage access to X-KeepAlive, then turn the switch on again.</string>
+    <string name="msg_add_game_first">Add a game first.</string>
+    <string name="msg_no_notification">Without the notification, Android will not keep the foreground service.</string>
+    <string name="msg_shizuku_not_running">Shizuku is not running. Open it and start it with wireless debugging.</string>
+    <string name="msg_shizuku_already">Shizuku authorization is already granted.</string>
+    <string name="msg_shizuku_request_failed">Shizuku request failed.</string>
+    <string name="msg_choose_game_first">Choose a game first.</string>
+    <string name="msg_dev_options_failed">Developer options could not be opened. Turn them on from About phone first.</string>
+    <string name="msg_about_failed">About phone could not be opened.</string>
+    <string name="msg_shizuku_missing">Shizuku is not installed.</string>
+    <string name="msg_store_failed">The Play Store could not be opened.</string>
+    <string name="msg_test_saved">Result saved in the local log.</string>
+    <string name="msg_stop_failed">Service was not stopped.</string>
+    <string name="msg_already_unrestricted">Battery is already set to Unrestricted.</string>    <string name="msg_start_failed">Android refused to start the service.</string>
+    <string name="msg_svc_no_install">Shizuku is not installed.</string>
+    <string name="msg_svc_not_running">Shizuku is not running. Start it before turning the service on.</string>
+    <string name="msg_svc_no_auth">Authorize Shizuku before turning the service on.</string>
+    <string name="msg_leftover_restored">Leftover policy for %1$s was restored.</string>
+    <string name="msg_leftover_not_restored">Leftover policy for %1$s was not restored (%2$s).</string>
+
+    <!-- Event log entries -->
+    <string name="log_monitoring_started">Monitoring started. The service does not keep the game alive by itself.</string>
+    <string name="log_shizuku_stopped">Shizuku stopped. The service was turned off.</string>
+    <string name="log_service_idle">The service stays off until Shizuku is running and authorized.</string>
+    <string name="log_policy_unverified">Policy is no longer verified for %1$s.</string>
+    <string name="log_monitoring_stopped">Monitoring stopped.</string>
+    <string name="log_boot_idle">No automatic restore. Shizuku and wireless debugging do not restart on their own.</string>
+    <string name="log_boot_no_permissions">Automation is saved, but permissions are missing. Open X-KeepAlive and turn it on again.</string>
+    <string name="log_boot_no_shizuku">Shizuku is not running. The service was not started. The selected apps stay on.</string>
+    <string name="log_boot_restarted">Monitoring restarted for %1$s.</string>
+
+    <!-- Shizuku status -->
+    <string name="shizuku_not_installed">Shizuku is not installed.</string>
+    <string name="shizuku_stopped">Shizuku is installed but its service is stopped. This app cannot see the wireless debugging pairing until you start Shizuku.</string>
+    <string name="shizuku_running">Shizuku running and authorized</string>
+    <string name="shizuku_running_api">Shizuku running and authorized (API %1$d)</string>
+    <string name="shizuku_needs_auth">Shizuku is running. It needs your authorization, which is not requested on its own.</string>
+    <!-- Home widget -->
+    <string name="widget_desc">X-KeepAlive on/off switch</string>
+    <string name="widget_on">On</string>
+    <string name="widget_off">Off</string>
+    <string name="widget_status_on">SERVICE ACTIVE</string>
+    <string name="widget_status_off">SERVICE STOPPED</string>
+    <plurals name="widget_watched">
+        <item quantity="one">%d monitored app</item>
+        <item quantity="other">%d monitored apps</item>
+    </plurals>
+
+    <!-- Phone tuning: battery and speed, never touches monitored games -->
+    <string name="tune_title">Phone tuning</string>
+    <string name="tune_sub">Save battery and make the phone snappier with documented ADB commands. Everything is reversible.</string>
+    <string name="tune_note">Monitored games are always excluded from tuning.</string>
+    <string name="tune_anims_title">Fast animations</string>
+    <string name="tune_anims_body">Sets animation scales to 0.5x. Turning it off restores your original values.</string>
+    <string name="tune_drain_title">Battery-draining apps</string>
+    <string name="tune_drain_body">Restricts standby and background use for the apps you pick. Removing one restores its original values.</string>
+    <string name="tune_drain_empty">No app restricted yet.</string>
+    <string name="tune_drain_add">Restrict an app</string>
+    <string name="tune_bloat_title">Disable bloatware</string>
+    <string name="tune_bloat_body">Disables the apps you pick. They disappear and stop consuming battery. Re-enable them here any time.</string>
+    <string name="tune_bloat_empty">No app disabled by X-KeepAlive.</string>
+    <string name="tune_bloat_add">Disable an app</string>
+    <string name="tune_bloat_enable">Enable</string>
+    <string name="tune_cache_title">Free memory</string>
+    <string name="tune_cache_body">Trims cached processes to free RAM right now. Safe, Android rebuilds caches as needed.</string>
+    <string name="tune_cache_button">Trim caches now</string>
+    <string name="tune_remove">Remove</string>
+    <string name="tune_search_title">Choose an app</string>
+    <string name="tune_search">Search</string>
+    <string name="tune_no_results">No apps found.</string>
+    <string name="msg_tune_anims_on">Fast animations on.</string>
+    <string name="msg_tune_anims_off">Original animation scales restored.</string>
+    <string name="msg_tune_drain_on">%1$s restricted.</string>
+    <string name="msg_tune_disabled">%1$s disabled.</string>
+    <string name="msg_tune_enabled">%1$s enabled again.</string>
+    <string name="msg_tune_cache">Caches trimmed.</string>
+    <string name="msg_tune_failed">Tuning failed. Check that Shizuku is running and authorized.</string>
+
+    <!-- Usage-based recommendations -->
+    <string name="tune_adv_title">Recommended for you</string>
+    <string name="tune_adv_body">Based on your real usage: apps you never open or rarely use. Games and X-KeepAlive are never listed.</string>
+    <string name="tune_adv_need_usage">Grant usage access from the Guide to see personalized recommendations.</string>
+    <string name="tune_adv_empty">Nothing to suggest: every app is either used or already handled.</string>
+    <string name="tune_adv_apply_all">Apply all</string>
+    <string name="msg_tune_batch">Done: %1$d disabled, %2$d restricted, %3$d failed.</string>
+    <string name="tune_adv_limit">Limit</string>
+    <string name="tune_adv_disable">Disable</string>
+    <string name="tune_adv_never">never opened in 7 days</string>
+    <string name="tune_adv_minutes">%d min in 7 days</string>
+    <string name="tune_adv_hours">%d h %d min in 7 days</string>
+    <string name="tune_reason_bloat">Preinstalled and never used — safe to disable.</string>
+    <string name="tune_reason_unused">Never used — safe to disable.</string>
+    <string name="tune_reason_rare">Rarely used — limit its background.</string>
+</resources>

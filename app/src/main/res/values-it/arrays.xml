@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="step_dev_details">
+        <item>1. Apri Impostazioni, poi Info sul telefono.</item>
+        <item>2. Apri Informazioni software (su Samsung, Xiaomi e altri il Numero build è lì).</item>
+        <item>3. Tocca Numero build 7 volte di seguito.</item>
+        <item>4. Inserisci il blocco schermo (PIN, sequenza o password) se Android lo chiede.</item>
+        <item>5. Attendi il messaggio “Ora sei uno sviluppatore”.</item>
+        <item>6. Torna a Impostazioni, apri Sistema, poi Opzioni sviluppatore per verificare il nuovo menu.</item>
+    </string-array>
+    <string-array name="step_wifi_details">
+        <item>1. Apri Impostazioni, poi Sistema, poi Opzioni sviluppatore.</item>
+        <item>2. Attiva Debug wireless e conferma con Consenti.</item>
+        <item>3. Resta nella pagina Debug wireless.</item>
+        <item>4. Tocca “Associa dispositivo con codice” per mostrare il codice a 6 cifre.</item>
+        <item>5. Lascia visibile questa schermata. Digiterai il codice in Shizuku nei passaggi successivi.</item>
+        <item>Suggerimento: dopo un riavvio questo interruttore si spegne. Torna qui e riaccendilo.</item>
+    </string-array>
+    <string-array name="step_install_details">
+        <item>1. Tocca il pulsante qui sotto per aprire la pagina Shizuku nel Play Store.</item>
+        <item>2. Installa “Shizuku” di RikkaApps.</item>
+        <item>3. Torna a X-KeepAlive. Il passaggio si completa da solo quando il pacchetto viene trovato.</item>
+    </string-array>
+    <string-array name="step_start_details">
+        <item>1. Apri Shizuku e tocca Associazione, poi “Avvia tramite debug wireless”.</item>
+        <item>2. Tocca “Associa dispositivo con codice” dentro Shizuku se lo chiede.</item>
+        <item>3. Digita il codice a 6 cifre mostrato nella pagina debug wireless.</item>
+        <item>4. Attendi “Associazione riuscita”, poi torna in Shizuku e tocca Avvia.</item>
+        <item>5. Torna qui. Lo stato diventa “Shizuku in esecuzione”.</item>
+        <item>Se l\'associazione fallisce, spegni e riaccendi il debug wireless e richiedi un codice nuovo.</item>
+    </string-array>
+    <string-array name="step_start_legacy_details">
+        <item>1. Installa ADB su un computer e collega il telefono con debug USB attivo.</item>
+        <item>2. Apri Shizuku e segui “Avvia tramite ADB”.</item>
+        <item>3. Torna qui quando Shizuku risulta in esecuzione.</item>
+    </string-array>
+    <string-array name="step_auth_details">
+        <item>1. Tocca il pulsante qui sotto.</item>
+        <item>2. Nella richiesta di Shizuku, tocca Consenti (meglio “Consenti sempre”).</item>
+        <item>3. Torna qui. Il passaggio si completa quando Shizuku conferma l\'autorizzazione.</item>
+    </string-array>
+    <string-array name="step_usage_details">
+        <item>1. Tocca il pulsante qui sotto per aprire l\'accesso utilizzo.</item>
+        <item>2. Trova X-KeepAlive nell\'elenco e attiva “Consenti accesso utilizzo”.</item>
+        <item>3. Torna indietro. Il passaggio si completa da solo.</item>
+    </string-array>
+    <string-array name="step_notif_details">
+        <item>1. Tocca il pulsante qui sotto.</item>
+        <item>2. Tocca Consenti nella richiesta di sistema.</item>
+        <item>3. La notifica di stato X-KeepAlive resta visibile durante il monitoraggio.</item>
+    </string-array>
+    <string-array name="step_power_details">
+        <item>1. Tocca il pulsante qui sotto per aprire le impostazioni batteria.</item>
+        <item>2. Scegli “Senza restrizioni” (su alcuni telefoni: “Non ottimizzare”).</item>
+        <item>3. Torna qui. Il passaggio si completa da solo quando Android lo conferma.</item>
+    </string-array>
+    <string-array name="step_gamebatt_details">
+        <item>1. Tocca il pulsante qui sotto per aprire le impostazioni batteria di un gioco aggiunto.</item>
+        <item>2. Scegli “Senza restrizioni” per quel gioco.</item>
+        <item>3. Ripeti per ogni gioco tenuto in background.</item>
+    </string-array>
+    <string-array name="step_apps_details">
+        <item>1. Tocca Apri Home qui sotto.</item>
+        <item>2. Tocca Aggiungi app e scegli un gioco dalla lista.</item>
+        <item>3. Attiva il suo interruttore. Ripeti fino a 4 app.</item>
+        <item>4. Torna qui. Il passaggio finisce quando almeno un interruttore è acceso.</item>
+    </string-array>
+    <string-array name="step_service_details">
+        <item>1. Nella Home, accendi l\'interruttore vicino al contatore “0/4”.</item>
+        <item>2. Accetta la richiesta “Avviare il monitoraggio?”.</item>
+        <item>3. Lo stato diventa “Gestione background attiva” quando Shizuku conferma una policy.</item>
+    </string-array>
+</resources>

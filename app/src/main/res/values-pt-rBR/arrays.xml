@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="step_dev_details">
+        <item>1. Abra Ajustes e depois Sobre o telefone.</item>
+        <item>2. Abra Informações do software (na Samsung, Xiaomi e outros o Número da versão está lá).</item>
+        <item>3. Toque em Número da versão 7 vezes seguidas.</item>
+        <item>4. Digite seu bloqueio de tela (PIN, padrão ou senha) se o Android pedir.</item>
+        <item>5. Aguarde a mensagem “Você agora é um desenvolvedor”.</item>
+        <item>6. Volte a Ajustes, abra Sistema e Opções do desenvolvedor para confirmar o novo menu.</item>
+    </string-array>
+    <string-array name="step_wifi_details">
+        <item>1. Abra Ajustes, depois Sistema e Opções do desenvolvedor.</item>
+        <item>2. Ligue a Depuração sem fio e confirme com Permitir.</item>
+        <item>3. Fique na página de Depuração sem fio.</item>
+        <item>4. Toque em “Parear com código” para mostrar o código de 6 dígitos.</item>
+        <item>5. Deixe esta tela visível. Você digitará o código no Shizuku nas próximas etapas.</item>
+        <item>Dica: após reiniciar esta chave desliga. Volte aqui e ligue de novo.</item>
+    </string-array>
+    <string-array name="step_install_details">
+        <item>1. Toque no botão abaixo para abrir a página do Shizuku na Play Store.</item>
+        <item>2. Instale o “Shizuku” da RikkaApps.</item>
+        <item>3. Volte ao X-KeepAlive. A etapa se conclui sozinha quando o pacote é encontrado.</item>
+    </string-array>
+    <string-array name="step_start_details">
+        <item>1. Abra o Shizuku e toque em Pareamento, depois “Iniciar via depuração sem fio”.</item>
+        <item>2. Toque em “Parear com código” dentro do Shizuku se pedir.</item>
+        <item>3. Digite o código de 6 dígitos mostrado na página sem fio.</item>
+        <item>4. Aguarde “Pareamento bem-sucedido”, volte no Shizuku e toque em Iniciar.</item>
+        <item>5. Volte aqui. O status vira “Shizuku em execução”.</item>
+        <item>Se falhar, desligue e ligue a depuração sem fio e peça um código novo.</item>
+    </string-array>
+    <string-array name="step_start_legacy_details">
+        <item>1. Instale o ADB num computador e conecte o telefone com a depuração USB ligada.</item>
+        <item>2. Abra o Shizuku e siga “Iniciar via ADB”.</item>
+        <item>3. Volte aqui quando o Shizuku estiver em execução.</item>
+    </string-array>
+    <string-array name="step_auth_details">
+        <item>1. Toque no botão abaixo.</item>
+        <item>2. No aviso do Shizuku, toque em Permitir (ideal “Permitir o tempo todo”).</item>
+        <item>3. Volte aqui. A etapa se conclui quando o Shizuku confirma a permissão.</item>
+    </string-array>
+    <string-array name="step_usage_details">
+        <item>1. Toque no botão abaixo para abrir o Acesso a uso.</item>
+        <item>2. Encontre o X-KeepAlive na lista e ligue “Permitir acesso a uso”.</item>
+        <item>3. Volte. A etapa se conclui sozinha.</item>
+    </string-array>
+    <string-array name="step_notif_details">
+        <item>1. Toque no botão abaixo.</item>
+        <item>2. Toque em Permitir no aviso do sistema.</item>
+        <item>3. A notificação de status do X-KeepAlive fica visível durante o monitoramento.</item>
+    </string-array>
+    <string-array name="step_power_details">
+        <item>1. Toque no botão abaixo para abrir os ajustes de bateria.</item>
+        <item>2. Escolha “Sem restrições” (em alguns aparelhos: “Não otimizar”).</item>
+        <item>3. Volte aqui. A etapa se conclui sozinha quando o Android confirma.</item>
+    </string-array>
+    <string-array name="step_gamebatt_details">
+        <item>1. Toque no botão abaixo para abrir os ajustes de bateria de um jogo adicionado.</item>
+        <item>2. Escolha “Sem restrições” para esse jogo.</item>
+        <item>3. Repita para cada jogo em segundo plano.</item>
+    </string-array>
+    <string-array name="step_apps_details">
+        <item>1. Toque em Abrir Início abaixo.</item>
+        <item>2. Toque em Adicionar app e escolha um jogo da lista.</item>
+        <item>3. Ligue sua chave. Repita para até 4 apps.</item>
+        <item>4. Volte aqui. A etapa termina quando ao menos uma chave está ligada.</item>
+    </string-array>
+    <string-array name="step_service_details">
+        <item>1. No Início, ligue a chave ao lado do contador “0/4”.</item>
+        <item>2. Aceite o aviso “Iniciar o monitoramento?”.</item>
+        <item>3. O status vira “Gerenciamento em segundo plano ativo” quando o Shizuku confirma uma política.</item>
+    </string-array>
+</resources>
